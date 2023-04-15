@@ -22,6 +22,9 @@ const Home = () => {
                 .pauseFor(1000)
                 .deleteChars(10)
                 .typeString("Designer")
+                .pauseFor(1000)
+                .deleteChars(8)
+                .typeString("Self-Learner")
                 .start();
             }
         }

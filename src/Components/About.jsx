@@ -3,7 +3,7 @@ import {  Box, Flex, Grid, GridItem, Heading, Text } from "@chakra-ui/react";
 
 const About = () => {
     return (  
-            <Box as="section" h={"60vh"} bgGradient={"linear(to-r ,#D6EAE1 50%,#FAFFFD 50%)"}>
+            <Box as="section" h={"70vh"} bgGradient={"linear(to-r ,#D6EAE1 50%,#FAFFFD 50%)"}>
 
                     <Flex justifyContent="center"><Heading>About me</Heading></Flex>
 
@@ -14,7 +14,7 @@ const About = () => {
 
                     </GridItem>
 
-                    <GridItem colStart={3}>
+                    <GridItem bg={"red"} colStart={3}>
 
                             <Text>Dhanasai</Text>
                             <Text>dhanasai5566@gmail.com</Text>
@@ -22,10 +22,6 @@ const About = () => {
 
 
                     </GridItem>
-                    
-
-
-
 
             </Grid>
         
