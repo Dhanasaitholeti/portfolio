@@ -1,4 +1,4 @@
-import { Box,  Button,  GridItem, Heading, SimpleGrid, Text } from "@chakra-ui/react";
+import { Box,  Button,  GridItem, Heading, Image, SimpleGrid, Text } from "@chakra-ui/react";
 import htmlIcon from "../assets/icons/icons8-html-5-96.png"
 import ReduxIcon from "../assets/icons/icons8-redux-96.png"
 import cssIcon from "../assets/icons/icons8-css3-96.png"
@@ -9,21 +9,26 @@ import nodeIcon from "../assets/icons/icons8-nodejs-96.png"
 import expressIcon from "../assets/icons/icons8-express-js-96.png"
 import MongoIcon from "../assets/icons/icons8-mongodb-96.png"
 import RustIcon from "../assets/icons/icons8-rust-96.png"
+import ChakraIcon from "../assets/icons/icons8-chakra-ui-96.png"
+import ReduxSagaIcon from "../assets/icons/Redux-Saga-Logo.png"
 import { Card, CardHeader, CardBody, CardFooter } from '@chakra-ui/react'
 
 const Skills = () => {
 
     return (
         <Box as="section" h="max-content" bgColor="#D6EAE1" p={"5%"} >
-        <SimpleGrid columns={4} spacing={"40px"}>
+        <SimpleGrid columns={5} spacing={"40px"}>
                 
-            <Card h={"max-content"}>
+            <Card h={"max-content"} borderTop="5px solid #3E795F">
                 <CardHeader>
                     <Heading>Html</Heading> 
                 </CardHeader> 
 
                 <CardBody>
-                    <img src={htmlIcon} alt="" />
+                    <Image
+                     src={htmlIcon}
+                     alt="html-icon" />
+
                 </CardBody>
 
                 <CardFooter>
@@ -32,12 +37,12 @@ const Skills = () => {
             </Card>
 
 
-            <Card >
+            <Card  h={"max-content"} borderTop="5px solid #3E795F">
                 <CardHeader>
                     <Heading>CSS</Heading> 
                 </CardHeader>
                 <CardBody>
-                    <img src={cssIcon} alt="" />
+                    <Image src={cssIcon} alt="cssicon" />
                 </CardBody>
                 <CardFooter>
                     <Button>Website</Button>
@@ -45,24 +50,24 @@ const Skills = () => {
             </Card>
 
 
-            <Card >
+            <Card  h={"max-content"} borderTop="5px solid #3E795F">
             <CardHeader>
                     <Heading>Javascript</Heading> 
                 </CardHeader>
                 <CardBody>
-                    <img src={JsIcon} alt="" />
+                    <Image src={JsIcon} alt="" />
                 </CardBody>
                 <CardFooter>
                     <Button>Website</Button>
                 </CardFooter>
             </Card>
 
-            <Card >
+            <Card  h={"max-content"} borderTop="5px solid #3E795F">
             <CardHeader>
                     <Heading>Python</Heading> 
                 </CardHeader>
                 <CardBody>
-                    <img src={pythonIcon} alt="" />
+                    <Image src={pythonIcon} alt="" />
                 </CardBody>
                 <CardFooter>
                     <Button>Website</Button>
@@ -71,24 +76,24 @@ const Skills = () => {
 
             
 
-            <Card >
+            <Card h={"max-content"} borderTop="5px solid #3E795F">
             <CardHeader>
                     <Heading>ReactJs</Heading> 
                 </CardHeader>
                 <CardBody>
-                    <img src={reactIcon} alt="" />
+                    <Image src={reactIcon} alt="" />
                 </CardBody>
                 <CardFooter>
                 <Button>Website</Button>
 
                 </CardFooter>
             </Card>
-            <Card >
+            <Card  h={"max-content"} borderTop="5px solid #3E795F">
             <CardHeader>
                     <Heading>Redux</Heading> 
                 </CardHeader>
                 <CardBody>
-                    <img src={ReduxIcon} alt="" />
+                    <Image src={ReduxIcon} alt="" />
                 </CardBody>
                 <CardFooter>
                 <Button>Website</Button>
@@ -96,13 +101,12 @@ const Skills = () => {
                 </CardFooter>
             </Card>
 
-            <Card >
+            <Card  h={"max-content"} borderTop="5px solid #3E795F">
             <CardHeader>
                     <Heading>Redux-saga</Heading> 
                 </CardHeader>
                 <CardBody>
-                    <Text>Hello</Text>
-
+                   <Image src={ReduxSagaIcon} alt="Redux-saga" />
                 </CardBody>
                 <CardFooter>
                 <Button>Website</Button>
@@ -110,13 +114,12 @@ const Skills = () => {
                 </CardFooter>
             </Card>
 
-            <Card >
+            <Card  h={"max-content"} borderTop="5px solid #3E795F">
                 <CardHeader>
                     <Heading>Chakra-UI</Heading> 
                 </CardHeader>
                 <CardBody>
-                    <Text>Hello</Text>
-
+                    <Image src={ChakraIcon} alt="Chakra-UI" />
                 </CardBody>
                 <CardFooter>
                 <Button>Website</Button>
@@ -124,12 +127,12 @@ const Skills = () => {
                 </CardFooter>
             </Card>
 
-            <Card >
+            <Card  h={"max-content"} borderTop="5px solid #3E795F">
             <CardHeader>
                     <Heading>NodeJs</Heading> 
                 </CardHeader>
                 <CardBody>
-                <img src={nodeIcon} alt="" />
+                <Image src={nodeIcon} alt="" />
                 </CardBody>
                 <CardFooter>
                 <Button>Website</Button>
@@ -137,12 +140,12 @@ const Skills = () => {
                 </CardFooter>
             </Card>
 
-            <Card >
+            <Card  h={"max-content"} borderTop="5px solid #3E795F">
             <CardHeader>
                     <Heading>Express Js</Heading> 
                 </CardHeader>
                 <CardBody>
-                    <img src={expressIcon} alt="" />
+                    <Image src={expressIcon} alt="" />
                 </CardBody>
                 <CardFooter>
                 <Button>Website</Button>
@@ -150,24 +153,24 @@ const Skills = () => {
                 </CardFooter>
             </Card>
 
-            <Card >
+            <Card  h={"max-content"} borderTop="5px solid #3E795F">
             <CardHeader>
                     <Heading>MongoDb</Heading> 
                 </CardHeader>
                 <CardBody>
-                    <img src={MongoIcon} alt="" />
+                    <Image src={MongoIcon} alt="" />
                 </CardBody>
                 <CardFooter>
                 <Button>Website</Button>
 
                 </CardFooter>
             </Card>
-            <Card >
+            <Card  h={"max-content"} borderTop="5px solid #3E795F">
             <CardHeader>
                     <Heading>Rust</Heading> 
                 </CardHeader>
                 <CardBody>
-                    <img src={RustIcon} alt="" />
+                    <Image src={RustIcon} alt="" />
                 </CardBody>
                 <CardFooter>
                 <Button>Website</Button>
