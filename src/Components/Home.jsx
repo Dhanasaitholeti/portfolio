@@ -1,10 +1,10 @@
-import { Box, Flex, Heading, Text, layoutPropNames } from "@chakra-ui/react";
+import { Box, Flex,  Text } from "@chakra-ui/react";
 import TypewriterComponent from "typewriter-effect";
 
 
 const Home = () => {
     return (  
-        <Flex as={"section"}  h={"90vh"} flexDir={"column"} alignItems={"center"} justifyContent={"center"}  bgGradient={"linear(to-r,#FAFFFD 50% ,#D6EAE1 50%)"} >
+        <Flex as={"section"} id="home" h={"100vh"} flexDir={"column"} alignItems={"center"} justifyContent={"center"}  bgGradient={"linear(to-r,#FAFFFD 50% ,#D6EAE1 50%)"} >
             <Text fontSize={"26px"} fontWeight={"bold"} fontFamily={"opensans"}>
                 Hey👋,I am
             </Text>

@@ -1,31 +1,20 @@
-import {  Box, Flex, Grid, GridItem, Heading, Text } from "@chakra-ui/react";
-
+import {  Box, Flex, Grid, GridItem, Heading, Image, Text } from "@chakra-ui/react";
+import Img from "../assets/man.png"
 
 const About = () => {
     return (  
-            <Box as="section" h={"70vh"} bgGradient={"linear(to-r ,#D6EAE1 50%,#FAFFFD 50%)"}>
-
+            <Flex as="section" id="about" h="max-content" bgColor={"#FAFFFD"} alignItems="center" flexDir="column">
                     <Flex justifyContent="center"><Heading>About me</Heading></Flex>
-
-           <Grid templateColumns={"repeat(4,1fr)"}  >
-
-                    <GridItem bg={"black"} colStart={2}>
-                            
-
-                    </GridItem>
-
-                    <GridItem bg={"red"} colStart={3}>
-
-                            <Text>Dhanasai</Text>
-                            <Text>dhanasai5566@gmail.com</Text>
-                            
-
-
-                    </GridItem>
-
-            </Grid>
+                    <Box >
+                        <Flex h={"150px"} w={"150px"}>
+                                <Image src={Img} />
+                        </Flex>
+                        <Text>Name:Dhanasai Tholeti</Text>
+                        <Text>22-01-2003</Text>
+                        <Text></Text>
+                    </Box>
         
-            </Box>
+            </Flex>
     );
 }
  

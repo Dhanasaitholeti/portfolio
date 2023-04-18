@@ -1,4 +1,5 @@
-import { Box,  Button,  GridItem, Heading, Image, SimpleGrid, Text } from "@chakra-ui/react";
+import { Box,  Button,  GridItem, Heading, Image, Link, SimpleGrid, Text } from "@chakra-ui/react";
+import { motion } from "framer-motion";
 import htmlIcon from "../assets/icons/icons8-html-5-96.png"
 import ReduxIcon from "../assets/icons/icons8-redux-96.png"
 import cssIcon from "../assets/icons/icons8-css3-96.png"
@@ -14,169 +15,224 @@ import ReduxSagaIcon from "../assets/icons/Redux-Saga-Logo.png"
 import { Card, CardHeader, CardBody, CardFooter } from '@chakra-ui/react'
 
 const Skills = () => {
+    const MotionCard = motion(Card);
+    const flexsettings = {
+        display: 'flex',
+        justifyContent: 'center'
+    }
+    const scalevales = { 
+            opacity: 1 ,
+            scale:1
+        }
+    const initvalues = {
+        opacity: 0 , 
+        scale: 0
+    }
+    const cardTransition = {
+        ease:"easeIn",
+        duration: 0.3
+    }
 
     return (
-        <Box as="section" h="max-content" bgColor="#D6EAE1" p={"5%"} >
+        <Box as="section" id="skills" h="max-content" bgColor="#D6EAE1" p={"5%"} >
+            <Heading as={'h1'} mb={"40px"}>Skills</Heading>
         <SimpleGrid columns={5} spacing={"40px"}>
                 
-            <Card h={"max-content"} borderTop="5px solid #3E795F">
-                <CardHeader>
+            <MotionCard h={"max-content"} borderTop="5px solid #3E795F" 
+            initial={{...initvalues}} 
+            whileInView={{...scalevales}}
+            transition={{...cardTransition}}
+         >
+                <CardHeader {...flexsettings}>
                     <Heading>Html</Heading> 
                 </CardHeader> 
 
-                <CardBody>
-                    <Image
-                     src={htmlIcon}
-                     alt="html-icon" />
-
+                <CardBody {...flexsettings}>
+                    <Image src={htmlIcon} alt="html-icon" />
                 </CardBody>
-
-                <CardFooter>
-                    <Button>Website</Button>
+                <CardFooter {...flexsettings}>
+                    <Link href="https://www.w3.org/standards/webdesign/htmlcss" target="_blank"><Button>Official Docs</Button></Link>
                 </CardFooter>
-            </Card>
+            </MotionCard>
 
 
-            <Card  h={"max-content"} borderTop="5px solid #3E795F">
-                <CardHeader>
+            <MotionCard  h={"max-content"} borderTop="5px solid #3E795F"
+            initial={{...initvalues}} 
+            whileInView={{...scalevales}}
+            transition={{...cardTransition}}
+            >
+                <CardHeader {...flexsettings}>
                     <Heading>CSS</Heading> 
                 </CardHeader>
-                <CardBody>
+                <CardBody {...flexsettings}>
                     <Image src={cssIcon} alt="cssicon" />
                 </CardBody>
-                <CardFooter>
-                    <Button>Website</Button>
+                <CardFooter {...flexsettings}>
+                    <Link href="https://www.w3.org/standards/webdesign/htmlcss" target="_blank"><Button>Official Docs</Button></Link>
                 </CardFooter>
-            </Card>
+            </MotionCard>
 
 
-            <Card  h={"max-content"} borderTop="5px solid #3E795F">
-            <CardHeader>
+            <MotionCard  h={"max-content"} borderTop="5px solid #3E795F"
+            initial={{...initvalues}} 
+            whileInView={{...scalevales}}
+            transition={{...cardTransition}}
+            >
+            <CardHeader {...flexsettings}>
                     <Heading>Javascript</Heading> 
                 </CardHeader>
-                <CardBody>
+                <CardBody {...flexsettings}>
                     <Image src={JsIcon} alt="" />
                 </CardBody>
-                <CardFooter>
-                    <Button>Website</Button>
+                <CardFooter {...flexsettings}>
+                    <Link href="https://developer.mozilla.org/en-US/docs/Web/javascript" target="_blank"><Button>Official Docs</Button></Link>
                 </CardFooter>
-            </Card>
+            </MotionCard>
 
-            <Card  h={"max-content"} borderTop="5px solid #3E795F">
-            <CardHeader>
+            <MotionCard  h={"max-content"} borderTop="5px solid #3E795F"
+            initial={{...initvalues}} 
+            whileInView={{...scalevales}}
+            transition={{...cardTransition}}
+            >
+            <CardHeader {...flexsettings}>
                     <Heading>Python</Heading> 
                 </CardHeader>
-                <CardBody>
+                <CardBody{...flexsettings} >
                     <Image src={pythonIcon} alt="" />
                 </CardBody>
-                <CardFooter>
-                    <Button>Website</Button>
+                <CardFooter {...flexsettings}>
+                    <Link href="https://www.python.org/" target="_blank"><Button>Official Docs</Button></Link>
                 </CardFooter>
-            </Card>
+            </MotionCard>
 
-            
 
-            <Card h={"max-content"} borderTop="5px solid #3E795F">
-            <CardHeader>
+            <MotionCard h={"max-content"} borderTop="5px solid #3E795F"
+            initial={{...initvalues}} 
+            whileInView={{...scalevales}}
+            transition={{...cardTransition}}
+            >
+            <CardHeader {...flexsettings}>
                     <Heading>ReactJs</Heading> 
                 </CardHeader>
-                <CardBody>
+                <CardBody {...flexsettings}>
                     <Image src={reactIcon} alt="" />
                 </CardBody>
-                <CardFooter>
-                <Button>Website</Button>
-
+                <CardFooter {...flexsettings}>
+                    <Link href="https://react.dev/" target="_blank"><Button>Official Docs</Button></Link>
                 </CardFooter>
-            </Card>
-            <Card  h={"max-content"} borderTop="5px solid #3E795F">
-            <CardHeader>
-                    <Heading>Redux</Heading> 
-                </CardHeader>
-                <CardBody>
-                    <Image src={ReduxIcon} alt="" />
-                </CardBody>
-                <CardFooter>
-                <Button>Website</Button>
-
-                </CardFooter>
-            </Card>
-
-            <Card  h={"max-content"} borderTop="5px solid #3E795F">
-            <CardHeader>
-                    <Heading>Redux-saga</Heading> 
-                </CardHeader>
-                <CardBody>
-                   <Image src={ReduxSagaIcon} alt="Redux-saga" />
-                </CardBody>
-                <CardFooter>
-                <Button>Website</Button>
-
-                </CardFooter>
-            </Card>
-
-            <Card  h={"max-content"} borderTop="5px solid #3E795F">
-                <CardHeader>
-                    <Heading>Chakra-UI</Heading> 
-                </CardHeader>
-                <CardBody>
-                    <Image src={ChakraIcon} alt="Chakra-UI" />
-                </CardBody>
-                <CardFooter>
-                <Button>Website</Button>
-
-                </CardFooter>
-            </Card>
-
-            <Card  h={"max-content"} borderTop="5px solid #3E795F">
-            <CardHeader>
+            </MotionCard>
+            
+            <MotionCard  h={"max-content"} borderTop="5px solid #3E795F"
+            initial={{...initvalues}} 
+            whileInView={{...scalevales}}
+            transition={{...cardTransition}}
+            >
+            <CardHeader {...flexsettings}>
                     <Heading>NodeJs</Heading> 
                 </CardHeader>
-                <CardBody>
+                <CardBody {...flexsettings}>
                 <Image src={nodeIcon} alt="" />
                 </CardBody>
-                <CardFooter>
-                <Button>Website</Button>
-                    
+                <CardFooter {...flexsettings}>
+                    <Link href="https://nodejs.org/en" target="_blank"><Button>Official Docs</Button></Link>
                 </CardFooter>
-            </Card>
+            </MotionCard>
 
-            <Card  h={"max-content"} borderTop="5px solid #3E795F">
-            <CardHeader>
+            <MotionCard  h={"max-content"} borderTop="5px solid #3E795F"
+            initial={{...initvalues}} 
+            whileInView={{...scalevales}}
+            transition={{...cardTransition}}
+            >
+            <CardHeader {...flexsettings}>
                     <Heading>Express Js</Heading> 
                 </CardHeader>
-                <CardBody>
+                <CardBody {...flexsettings}>
                     <Image src={expressIcon} alt="" />
                 </CardBody>
-                <CardFooter>
-                <Button>Website</Button>
-
+                <CardFooter {...flexsettings}>
+                    <Link href="https://expressjs.com/" target="_blank"><Button>Official Docs</Button></Link>
                 </CardFooter>
-            </Card>
+            </MotionCard>
 
-            <Card  h={"max-content"} borderTop="5px solid #3E795F">
-            <CardHeader>
+            <MotionCard  h={"max-content"} borderTop="5px solid #3E795F"
+            initial={{...initvalues}} 
+            whileInView={{...scalevales}}
+            transition={{...cardTransition}}
+            >
+            <CardHeader {...flexsettings}>
+                    <Heading>Redux</Heading> 
+                </CardHeader>
+                <CardBody {...flexsettings}>
+                    <Image src={ReduxIcon} alt="" />
+                </CardBody>
+                <CardFooter {...flexsettings}>
+                    <Link href="https://redux.js.org/" target="_blank"><Button>Official Docs</Button></Link>
+                </CardFooter>
+            </MotionCard>
+
+            <MotionCard  h={"max-content"} borderTop="5px solid #3E795F"
+            initial={{...initvalues}} 
+            whileInView={{...scalevales}}
+            transition={{...cardTransition}}
+            >
+            <CardHeader {...flexsettings}>
+                    <Heading>Redux-saga</Heading> 
+                </CardHeader>
+                <CardBody {...flexsettings}>
+                   <Image src={ReduxSagaIcon} alt="Redux-saga" />
+                </CardBody>
+                <CardFooter {...flexsettings}>
+                    <Link href="https://redux-saga.js.org/" target="_blank"><Button>Official Docs</Button></Link>
+                </CardFooter>
+            </MotionCard>
+
+            <MotionCard  h={"max-content"} borderTop="5px solid #3E795F"
+            initial={{...initvalues}} 
+            whileInView={{...scalevales}}
+            transition={{...cardTransition}}
+            >
+                <CardHeader {...flexsettings}>
+                    <Heading>Chakra-UI</Heading> 
+                </CardHeader>
+                <CardBody {...flexsettings}>
+                    <Image src={ChakraIcon} alt="Chakra-UI" />
+                </CardBody>
+                <CardFooter {...flexsettings}>
+                    <Link href="https://chakra-ui.com/" target="_blank"><Button>Official Docs</Button></Link>
+                </CardFooter>
+            </MotionCard>
+
+            <MotionCard  h={"max-content"} borderTop="5px solid #3E795F"
+            initial={{...initvalues}} 
+            whileInView={{...scalevales}}
+            transition={{...cardTransition}}
+            >
+            <CardHeader {...flexsettings}>
                     <Heading>MongoDb</Heading> 
                 </CardHeader>
-                <CardBody>
+                <CardBody {...flexsettings}>
                     <Image src={MongoIcon} alt="" />
                 </CardBody>
-                <CardFooter>
-                <Button>Website</Button>
-
+                <CardFooter {...flexsettings}>
+                    <Link href="https://www.mongodb.com/" target="_blank"><Button>Official Docs</Button></Link>
                 </CardFooter>
-            </Card>
-            <Card  h={"max-content"} borderTop="5px solid #3E795F">
-            <CardHeader>
+            </MotionCard>
+
+            <MotionCard  h={"max-content"} borderTop="5px solid #3E795F" 
+            initial={{...initvalues}} 
+            whileInView={{...scalevales}}
+            transition={{...cardTransition}}
+            >   
+            <CardHeader {...flexsettings} >
                     <Heading>Rust</Heading> 
                 </CardHeader>
-                <CardBody>
+                <CardBody {...flexsettings}>
                     <Image src={RustIcon} alt="" />
                 </CardBody>
-                <CardFooter>
-                <Button>Website</Button>
-
-                </CardFooter>   
-            </Card>
+                <CardFooter {...flexsettings}>
+                    <Link href="https://www.rust-lang.org/" target="_blank"><Button>Official Docs</Button></Link>
+                </CardFooter>
+            </MotionCard>
         </SimpleGrid>
         </Box>  
      );

@@ -1,22 +1,20 @@
-import About from './Components/About'
-import Contact from './Components/Contact'
-import Header from './Components/Header'
-import Home from './Components/Home'
+import { Box } from '@chakra-ui/react'
 import Projects from './Components/Projects'
-import Skills from './Components/Skills'
+import { Route, Routes } from 'react-router-dom'
+import Head from './Head'
+import Header from './Components/Header'
 
 function App() {
 
 
   return (
-    <div className="App">
-        <Header/>
-        <Home />
-        <About />
-        <Skills />
-        <Projects />
-        <Contact />
-      </div>
+    <Box as='div' className="App"  >
+      <Header />
+      <Routes>
+          <Route path="/" element={<Head />} />
+          <Route path="/projects" element={<Projects />} />
+        </Routes>
+      </Box>
   )
 }
 
