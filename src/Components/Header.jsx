@@ -1,5 +1,6 @@
 import { Button, Flex, HStack, Heading } from "@chakra-ui/react";
-
+import { Link } from "react-router-dom";
+import { Link as Clink } from "@chakra-ui/react";
 
 
 const Header = () => {
@@ -10,11 +11,11 @@ const Header = () => {
             </HStack>
             
             <HStack spacing={"20px"}>
-                <Button colorScheme={'teal'} variant="ghost"><a href="#home">Home</a></Button>
-                <Button colorScheme={'teal'} variant="ghost"><a href="#about">About</a></Button>
-                <Button colorScheme={'teal'} variant="ghost"><a href="#skills">Skills</a></Button>
-                <Button colorScheme={'teal'} >Projects</Button>
-                <Button colorScheme={'teal'} variant="ghost"><a href="#contact">Contact</a></Button>
+                <Button colorScheme={'teal'} variant="ghost"><Clink href="/#home">Home</Clink></Button>
+                <Button colorScheme={'teal'} variant="ghost"><Clink href="/#about">About</Clink></Button>
+                <Button colorScheme={'teal'} variant="ghost"><Clink href="/#skills">Skills</Clink></Button>
+                <Button colorScheme={'teal'} variant="outline"><Link to="/projects">Projects</Link></Button>
+                <Button colorScheme={'teal'} variant="ghost"><Clink href="/#contact">Contact</Clink></Button>
             </HStack>         
         </Flex>
      );
