@@ -16,6 +16,8 @@ import { Card, CardHeader, CardBody, CardFooter } from '@chakra-ui/react'
 
 const Skills = () => {
     const MotionCard = motion(Card);
+    
+
     const flexsettings = {
         display: 'flex',
         justifyContent: 'center'
@@ -34,7 +36,7 @@ const Skills = () => {
     }
 
     return (
-        <Box as="section" id="skills" h="max-content" bgColor="#D6EAE1" p={"5%"} >
+            <Box as="section" id="skills" h="max-content" bgColor="#D6EAE1" p={"5%"}  >
             <Heading as={'h1'} mb={"40px"}>Skills</Heading>
         <SimpleGrid columns={5} spacing={"40px"}>
                 

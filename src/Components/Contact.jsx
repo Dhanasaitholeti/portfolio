@@ -8,53 +8,84 @@ import {
      InputGroup,
      InputLeftAddon,
      SimpleGrid,
-     Textarea
+     Textarea,
+     useToast
 } from "@chakra-ui/react";
 
-import { motion } from "framer-motion";
+
 
 import githubicon from "../assets/logos/icons8-github-60.png"
 import LinkedinIcon from "../assets/logos/icons8-linkedin-60.png"
 import InstagramIcon from "../assets/logos/icons8-instagram-60.png"
 import redditIcon from "../assets/logos/icons8-reddit-60.png"
 import discord from "../assets/logos/icons8-discord-60.png"
+import {  useEffect, useState } from "react";
+import emailjs from "emailjs-com";
 
 
 
 const Contact = () => {
-    const MotionCard = motion(Card);
-    const MotionGrid = motion(SimpleGrid);
 
-    const rightAnime = {
-        initial:{
-            opacity:0,
-            scale:0,
-            y:300,
-           rotate:+180
+    const inputclearvals = document.querySelectorAll('.inputclear')
+
+    
+    
+    const toast = useToast({
+        position:"top-center",
+        containerStyle:{
+            color:"#3E795F"
         }
+    });
+    
+
+    const [emaildata,setEmaildata] = useState({
+        nameinput:"",
+        emailinput:"",
+        message:""
+    })
+
+    const clearform =() => {
+        
+        inputclearvals[0].value = "";
+        inputclearvals[1].value = "";
+        inputclearvals[2].value = "";
+
+        setEmaildata({
+            nameinput:"",
+            emailinput:"",
+            message:""
+        })
+
     }
 
-    const leftAnime = {
-        initial:{
-            opacity:0,
-            scale:0,
-            y:300,
-            rotate:-180
-        }
-    }
-    const commonAnime= {
-       
-        whileInView:{
-            y:0,
-            opacity:1,
-            scale:1,
-            rotate:0
-        },
-        transition:{
-            ease:"easeInOut",
-            duration:0.7
-        }
+    const handleInputChange = e => setEmaildata({...emaildata , [e.target.name]:e.target.value})
 
+    const handleSubmit = async () =>{
+        try {
+            
+            await emailjs.send("service_i2fdwj9","template_p79riuq",{
+                from_name: emaildata.nameinput,
+                email_id: emaildata.emailinput,
+                message: emaildata.message,
+                },"EiREnRvC_0c1K0x0g")
+            toast({
+                title:"Thank you for your feedback!😀",
+                status:"success",
+                variant:'left-accent',
+                isClosable:true
+            })
+            clearform();            
+            
+        } catch (error) {
+            console.log(error)
+            toast({
+                title:"Unable to send feedback!😑",
+                status:"error",
+                variant:'left-accent',
+                isClosable:true
+            }) 
+        }
+        
     }
 
 
@@ -64,11 +95,11 @@ const Contact = () => {
     }
 
     return (  
-    <Box as="section" id="contact" h="max-content" bgColor={"#FAFFFD"}>
+    <Box as="section" id="contact" h="max-content" bgColor={"#FAFFFD"} p="5%">
         <Heading>Contact Me</Heading>
         <SimpleGrid columns={2} alignContent="center" justifyItems="center">
  
-            <MotionCard 
+            <Card 
             gap={"20px"}  
             width="max-content" 
             border={"1px solid #3E795F"} 
@@ -76,26 +107,23 @@ const Contact = () => {
             m="5vh" 
             bgColor="#EDFCF9" 
             justifySelf="end" 
-            borderRadius="15px"
-             {...rightAnime} {...commonAnime} >
+            borderRadius="15px"  >
                 
                 <InputGroup w={"300px"}  >
                     <InputLeftAddon children="Name" />
-                    <Input variant="outline"  colorScheme="blackAlpha" />
+                    <Input variant="outline" type="text" onChange={handleInputChange}  defaultValue={emaildata.nameinput} name="nameinput" className="inputclear"/>
                 </InputGroup>
-
+        
                 <InputGroup w={"300px"}>
                     <InputLeftAddon children="Email" />
-                    <Input variant="outline" />
+                    <Input variant="outline"  type="email" onChange={handleInputChange}  defaultValue={emaildata.emailinput} name="emailinput" className="inputclear" />
                 </InputGroup>
 
-                <Textarea placeholder="your message here" w={"300px"} />
-                <Button w="50%" variant="outline" colorScheme="green">Send</Button>
-                
-
-            </MotionCard>
+                <Textarea placeholder="your message here" w={"300px"} onChange={handleInputChange} defaultValue={emaildata.message} name="message" className="inputclear" />
+                <Button w="50%" variant="outline" colorScheme="green" onClick={handleSubmit}>Send</Button>
+            </Card>
             
-            <MotionGrid 
+            <SimpleGrid 
             w={"50%"} 
             columns={2} 
             border={"1px solid #3E795F"} 
@@ -106,7 +134,7 @@ const Contact = () => {
             justifySelf="start" 
             p="30px" 
             borderRadius="15px" 
-            {...leftAnime} {...commonAnime}>
+            >
                 
                 <Box {...logoitemgrid} >
                     <Image src={githubicon} />
@@ -135,7 +163,7 @@ const Contact = () => {
                 <Button><a href="https://discord.gg/GEXKudhW">Follow</a></Button>
                 </Box>
 
-            </MotionGrid>
+            </SimpleGrid>
 
     
         </SimpleGrid>
