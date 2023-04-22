@@ -77,7 +77,6 @@ const Contact = () => {
             clearform();            
             
         } catch (error) {
-            console.log(error)
             toast({
                 title:"Unable to send feedback!😑",
                 status:"error",
@@ -88,7 +87,6 @@ const Contact = () => {
         
     }
 
-
     const logoitemgrid = {
         display:"grid",
         justifyItems:"center"
@@ -96,7 +94,7 @@ const Contact = () => {
 
     return (  
     <Box as="section" id="contact" h="max-content" bgColor={"#FAFFFD"} p="5%">
-        <Heading>Contact Me</Heading>
+        <Heading color="#3D3D3D">Contact Me</Heading>
         <SimpleGrid columns={2} alignContent="center" justifyItems="center">
  
             <Card 

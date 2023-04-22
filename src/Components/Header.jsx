@@ -7,7 +7,7 @@ const Header = () => {
     return ( 
         <Flex as={"nav"} zIndex={1} position={"fixed"} width="100%" bg={"white"} color={"black"}  px={"30px"} h={"7vh"} justifyContent="space-around" borderBottom="2px solid #D6EAE1" >
             <HStack>
-                <Heading as={"h1"}>Dhanasai</Heading>
+                <Heading as={"h1"} color="#3D3D3D">Dhanasai</Heading>
             </HStack>
             
             <HStack spacing={"20px"}>

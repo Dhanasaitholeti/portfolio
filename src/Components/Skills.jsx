@@ -22,14 +22,17 @@ const Skills = () => {
         display: 'flex',
         justifyContent: 'center'
     }
+
     const scalevales = { 
             opacity: 1 ,
             scale:1
         }
+
     const initvalues = {
         opacity: 0 , 
         scale: 0
     }
+    
     const cardTransition = {
         ease:"easeIn",
         duration: 0.3
@@ -37,7 +40,7 @@ const Skills = () => {
 
     return (
             <Box as="section" id="skills" h="max-content" bgColor="#D6EAE1" p={"5%"}  >
-            <Heading as={'h1'} mb={"40px"}>Skills</Heading>
+            <Heading as={'h1'} mb={"40px"} color="#3D3D3D">Skills</Heading>
         <SimpleGrid columns={5} spacing={"40px"}>
                 
             <MotionCard h={"max-content"} borderTop="5px solid #3E795F" 
@@ -57,7 +60,6 @@ const Skills = () => {
                 </CardFooter>
             </MotionCard>
 
-
             <MotionCard  h={"max-content"} borderTop="5px solid #3E795F"
             initial={{...initvalues}} 
             whileInView={{...scalevales}}
@@ -73,7 +75,6 @@ const Skills = () => {
                     <Link href="https://www.w3.org/standards/webdesign/htmlcss" target="_blank"><Button>Official Docs</Button></Link>
                 </CardFooter>
             </MotionCard>
-
 
             <MotionCard  h={"max-content"} borderTop="5px solid #3E795F"
             initial={{...initvalues}} 
@@ -106,7 +107,6 @@ const Skills = () => {
                     <Link href="https://www.python.org/" target="_blank"><Button>Official Docs</Button></Link>
                 </CardFooter>
             </MotionCard>
-
 
             <MotionCard h={"max-content"} borderTop="5px solid #3E795F"
             initial={{...initvalues}} 
