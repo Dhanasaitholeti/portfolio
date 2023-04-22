@@ -80,7 +80,7 @@ const Projects = () => {
                 </Tabs>
             </CardBody>
             <CardFooter display="flex" justifyContent={"space-evenly"}>
-                <Button><a href="https://dhindora.netlify.app/">view site</a></Button>
+                <Button ><a href="https://dhindora.netlify.app/">view site</a></Button>
                 <Button>Demo video</Button>
             </CardFooter>
            </Card>

@@ -28,15 +28,10 @@ const About = () => {
                                             <Text>kakinada,Andrapradesh</Text>
                                             <Text>dhanasai5566@gmail.com</Text>
                                             <Text>9618378837</Text>
-
                                         </Box>
-
                                 </SimpleGrid>
-                            
                         </Box>
-
                     </SimpleGrid>
-        
             </Box>
     );
 }
