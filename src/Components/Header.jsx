@@ -10,7 +10,7 @@ const Header = () => {
                 <Heading as={"h1"} color="#3D3D3D">Dhanasai</Heading>
             </HStack>
             
-            <HStack spacing={"20px"}>
+            <HStack spacing={"20px"} display={{base:"none", md:"flex"}}>
                 <Button colorScheme={'teal'} variant="ghost"><Clink href="/#home">Home</Clink></Button>
                 <Button colorScheme={'teal'} variant="ghost"><Clink href="/#about">About</Clink></Button>
                 <Button colorScheme={'teal'} variant="ghost"><Clink href="/#skills">Skills</Clink></Button>

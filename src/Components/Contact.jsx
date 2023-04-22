@@ -95,16 +95,16 @@ const Contact = () => {
     return (  
     <Box as="section" id="contact" h="max-content" bgColor={"#FAFFFD"} p="5%">
         <Heading color="#3D3D3D">Contact Me</Heading>
-        <SimpleGrid columns={2} alignContent="center" justifyItems="center">
+        <SimpleGrid columns={{base:1 ,lg:2 }} alignContent="center" justifyItems="center">
  
             <Card 
             gap={"20px"}  
-            width="max-content" 
+            width="max-content"
             border={"1px solid #3E795F"} 
             p="5vw" 
             m="5vh" 
             bgColor="#EDFCF9" 
-            justifySelf="end" 
+            justifySelf={{base:"center",lg:"end"}} 
             borderRadius="15px"  >
                 
                 <InputGroup w={"300px"}  >
@@ -122,14 +122,14 @@ const Contact = () => {
             </Card>
             
             <SimpleGrid 
-            w={"50%"} 
+            w={{base:"350px",lg:"70%"}} 
             columns={2} 
             border={"1px solid #3E795F"} 
-            justifyItems="center" 
+            justifyItems="center"
             gap="10px"  
             m="5vh" 
             bgColor="#EDFCF9" 
-            justifySelf="start" 
+            justifySelf={{base:"center",lg:"start"}} 
             p="30px" 
             borderRadius="15px" 
             >

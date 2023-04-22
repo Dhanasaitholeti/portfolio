@@ -198,7 +198,7 @@ const Projects = () => {
                 </Tabs>
             </CardBody>
             <CardFooter display="flex" justifyContent={"space-evenly"}>
-                <Button>view site</Button>
+                <Button> <a href="https://dhanasai-portfolio.netlify.app/"> view site </a></Button>
                 <Button>Demo video</Button>
             </CardFooter>
            </Card>

@@ -41,7 +41,7 @@ const Skills = () => {
     return (
             <Box as="section" id="skills" h="max-content" bgColor="#D6EAE1" p={"5%"}  >
             <Heading as={'h1'} mb={"40px"} color="#3D3D3D">Skills</Heading>
-        <SimpleGrid columns={5} spacing={"40px"}>
+        <SimpleGrid columns={{sm:2,md:3,lg:4,xl:5}} minChildWidth="260px" spacing={"40px"}>
                 
             <MotionCard h={"max-content"} borderTop="5px solid #3E795F" 
             initial={{...initvalues}} 
