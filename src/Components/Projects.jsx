@@ -26,7 +26,7 @@ import portfolio from "../assets/promos/portfolio.png"
 
 
 const Projects = () => {
-
+    
     const tabsstyles = {
         variant:"soft-rounded" ,
         colorScheme:"green",
@@ -34,9 +34,9 @@ const Projects = () => {
         isFitted:true
     }
     return ( 
-        <Box as="section" h="max-content"  w="100%" bgColor={"#fdffff"} pos="absolute" top="7vh" p={"3%"}>
+        <Box as="section" h="max-content"  w="100vw" bgColor={"#fdffff"} pos="absolute" top="7vh" p={"3%"}>
                     <Heading color="#3D3D3D"> Projects</Heading>
-           <SimpleGrid columns={3}  spacing="50px" p={"2%"} justifyItems="center" >
+           <SimpleGrid  minChildWidth={{base:"200px",sm:"300px",md:"450px"}}  spacing="20px" p="2%" justifyItems="center" >
 
 
 
@@ -52,11 +52,11 @@ const Projects = () => {
                         <Tab>Tools</Tab>
                     </TabList>
                     <TabPanels>
-                        <TabPanel><Image src={Dhindora} h="250px" w="400px" borderRadius="10px" boxShadow="0 2px 3px black"/></TabPanel>
+                        <TabPanel><Image src={Dhindora} h={{base:"180px",md:"250px"}} w={{base:"250px",md:"400px"}} borderRadius="10px" boxShadow="0 2px 3px black"/></TabPanel>
                         <TabPanel>
-                            <SimpleGrid columns={2} maxHeight={"250px"} w={"400px"} overflowY="scroll" >
+                            <SimpleGrid columns={2} maxHeight={"250px"} w={{base:"250px",md:"400px"}} overflowY="scroll" >
                                 
-                                <List fontSize="24px">
+                                <List fontSize={{base:"16px ",md:"24px"}}>
                                         <ListItem fontWeight="bold">Frontend</ListItem>
                                         <ListItem>CSS</ListItem>  
                                         <ListItem>Javascript</ListItem>
@@ -64,7 +64,7 @@ const Projects = () => {
                                         <ListItem>Redux</ListItem>
                                         <ListItem>Redux-Saga</ListItem>
                                 </List>
-                                <List fontSize="24px">
+                                <List fontSize={{base:"16px ",md:"24px"}}>
                                         <ListItem fontWeight="bold">Backend</ListItem>
                                         <ListItem>Node Js</ListItem>
                                         <ListItem>Express Js</ListItem>  
@@ -97,18 +97,18 @@ const Projects = () => {
                         <Tab>Tools</Tab>
                     </TabList>
                     <TabPanels>
-                        <TabPanel><Image src={student_Profile} h="250px" w="400px" borderRadius="10px" boxShadow="0 2px 3px black"/></TabPanel>
+                        <TabPanel><Image src={student_Profile}  h={{base:"180px",md:"250px"}} w={{base:"250px",md:"400px"}} borderRadius="10px" boxShadow="0 2px 3px black"/></TabPanel>
                         <TabPanel>
-                        <SimpleGrid columns={2} maxHeight={"250px"} w={"400px"} overflowY="scroll" >
+                        <SimpleGrid columns={2} maxHeight={"250px"} w={{base:"250px",md:"400px"}} overflowY="scroll" >
                                 
-                                <List fontSize="24px">
+                                <List fontSize={{base:"16px ",md:"24px"}}>
                                         <ListItem fontWeight="bold">Frontend</ListItem>
                                         <ListItem>CSS</ListItem>  
                                         <ListItem>Javascript</ListItem>
                                         <ListItem>React</ListItem>
                                         <ListItem>Redux</ListItem>
                                 </List>
-                                <List fontSize="24px">
+                                <List fontSize={{base:"16px ",md:"24px"}}>
                                         <ListItem fontWeight="bold">Backend</ListItem>
                                         <ListItem>Node Js</ListItem>
                                         <ListItem>Express Js</ListItem>  
@@ -139,18 +139,18 @@ const Projects = () => {
                         <Tab>Tools</Tab>
                     </TabList>
                     <TabPanels>
-                        <TabPanel><Image src={Infoboard} h="250px" w="400px" borderRadius="10px" boxShadow="0 2px 3px black"/></TabPanel>
+                        <TabPanel><Image src={Infoboard}  h={{base:"180px",md:"250px"}} w={{base:"250px",md:"400px"}} borderRadius="10px" boxShadow="0 2px 3px black"/></TabPanel>
                         <TabPanel>
-                        <SimpleGrid columns={2} maxHeight={"250px"} w={"400px"} overflowY="scroll" >
+                        <SimpleGrid columns={2} maxHeight={"250px"} w={{base:"250px",md:"400px"}} overflowY="scroll" >
                                 
-                                <List fontSize="24px">
+                                <List fontSize={{base:"16px ",md:"24px"}}>
                                         <ListItem fontWeight="bold">Frontend</ListItem>
                                         <ListItem>CSS</ListItem>  
                                         <ListItem>Javascript</ListItem>
                                         <ListItem>React</ListItem>
                                         <ListItem>Redux</ListItem>
                                 </List>
-                                <List fontSize="24px">
+                                <List fontSize={{base:"16px ",md:"24px"}}>
                                         <ListItem fontWeight="bold">Backend</ListItem>
                                         <ListItem>Node Js</ListItem>
                                         <ListItem>Express Js</ListItem>  
@@ -180,11 +180,11 @@ const Projects = () => {
                         <Tab>Tools</Tab>
                     </TabList>
                     <TabPanels>
-                        <TabPanel><Image src={portfolio} h="250px" w="400px" borderRadius="10px" boxShadow="0 2px 3px black"/></TabPanel>
+                        <TabPanel><Image src={portfolio} h={{base:"180px",md:"250px"}} w={{base:"250px",md:"400px"}} borderRadius="10px" boxShadow="0 2px 3px black"/></TabPanel>
                         <TabPanel>
-                        <SimpleGrid  maxHeight={"250px"} w={"400px"} overflowY="scroll" >
+                        <SimpleGrid  maxHeight={"250px"} w={{base:"250px",md:"400px"}} overflowY="scroll" >
                                 
-                                <List fontSize="24px">
+                                <List fontSize={{base:"16px ",md:"24px"}}>
                                         <ListItem fontWeight="bold">Frontend</ListItem>
                                         <ListItem>CSS</ListItem>  
                                         <ListItem>Javascript</ListItem>
@@ -216,11 +216,11 @@ const Projects = () => {
                         <Tab>Tools</Tab>
                     </TabList>
                     <TabPanels>
-                        <TabPanel><Image src={Library} h="250px" w="400px" borderRadius="10px" boxShadow="0 2px 3px black"/></TabPanel>
+                        <TabPanel><Image src={Library}  h={{base:"180px",md:"250px"}} w={{base:"250px",md:"400px"}} borderRadius="10px" boxShadow="0 2px 3px black"/></TabPanel>
                         <TabPanel>
-                        <SimpleGrid  maxHeight={"250px"} w={"400px"} overflowY="scroll" >
+                        <SimpleGrid  maxHeight={"250px"} w={{base:"250px",md:"400px"}} overflowY="scroll" >
                                 
-                                <List fontSize="24px">
+                                <List fontSize={{base:"16px ",md:"24px"}}>
                                         <ListItem fontWeight="bold">Frontend</ListItem>
                                         <ListItem>Html</ListItem>
                                         <ListItem>CSS</ListItem>
@@ -249,11 +249,11 @@ const Projects = () => {
                         <Tab>Tools</Tab>
                     </TabList>
                     <TabPanels>
-                        <TabPanel><Image src={RPS} h="250px" w="400px" borderRadius="10px" boxShadow="0 2px 3px black"/></TabPanel>
+                        <TabPanel><Image src={RPS}  h={{base:"180px",md:"250px"}} w={{base:"250px",md:"400px"}} borderRadius="10px" boxShadow="0 2px 3px black"/></TabPanel>
                         <TabPanel>
-                        <SimpleGrid  maxHeight={"250px"} w={"400px"} overflowY="scroll" >
+                        <SimpleGrid  maxHeight={"250px"} w={{base:"250px",md:"400px"}} overflowY="scroll" >
                                 
-                                <List fontSize="24px">
+                                <List fontSize={{base:"16px ",md:"24px"}}>
                                         <ListItem fontWeight="bold">Frontend</ListItem>
                                         <ListItem>Html</ListItem>
                                         <ListItem>CSS</ListItem>
@@ -275,4 +275,4 @@ const Projects = () => {
      );
 }
  
-export default Projects;
+export default Projects;    
