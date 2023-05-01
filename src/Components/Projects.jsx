@@ -23,6 +23,7 @@ import RPS from "../assets/promos/RPS.jpeg"
 import Library from "../assets/promos/library.jpeg"
 import Dhindora from "../assets/promos/Dhindora.jpeg"
 import portfolio from "../assets/promos/portfolio.png"
+import Todo from "../assets/promos/Todo.jpeg"
 
 
 const Projects = () => {
@@ -63,6 +64,52 @@ const Projects = () => {
                                         <ListItem>React</ListItem>
                                         <ListItem>Redux</ListItem>
                                         <ListItem>Redux-Saga</ListItem>
+                                </List>
+                                <List fontSize={{base:"16px ",md:"24px"}}>
+                                        <ListItem fontWeight="bold">Backend</ListItem>
+                                        <ListItem>Node Js</ListItem>
+                                        <ListItem>Express Js</ListItem>  
+                                        <ListItem>REST API</ListItem>
+                                        <ListItem>MongoDB</ListItem>
+                                        <ListItem>Authentication</ListItem>
+                                </List>
+
+                                
+                            </SimpleGrid>
+                        </TabPanel>
+                    </TabPanels>
+                </Tabs>
+            </CardBody>
+            <CardFooter display="flex" justifyContent={"space-evenly"}>
+                <Button ><a href="https://dhindora.netlify.app/">view site</a></Button>
+                <Button>Demo video</Button>
+            </CardFooter>
+           </Card>
+
+
+            {/* To-do */}
+           <Card w="max-content"  boxShadow="0 2px 5px black" >
+            <CardHeader display="flex" justifyContent="center">
+                <Heading as="h6" color="#3D3D3D">To-Do</Heading>
+            </CardHeader>
+            <CardBody  py={0} >
+            <Tabs {...tabsstyles} >
+                    <TabList>
+                        <Tab>prototype</Tab>
+                        <Tab>Tools</Tab>
+                    </TabList>
+                    <TabPanels>
+                        <TabPanel><Image src={Todo} h={{base:"180px",md:"250px"}} w={{base:"250px",md:"400px"}} borderRadius="10px" boxShadow="0 2px 3px black"/></TabPanel>
+                        <TabPanel>
+                            <SimpleGrid columns={2} maxHeight={"250px"} w={{base:"250px",md:"400px"}} overflowY="scroll" >
+                                
+                                <List fontSize={{base:"16px ",md:"24px"}}>
+                                        <ListItem fontWeight="bold">Frontend</ListItem>
+                                        <ListItem>CSS</ListItem>  
+                                        <ListItem>Javascript</ListItem>
+                                        <ListItem>React</ListItem>
+                                        <ListItem>Redux</ListItem>
+                                        
                                 </List>
                                 <List fontSize={{base:"16px ",md:"24px"}}>
                                         <ListItem fontWeight="bold">Backend</ListItem>
